@@ -1,68 +1,80 @@
-# How to Edit the Shop
+# How to Edit the 3D Print Shop
 
-This site is built so a beginner can help.
+Start with `products.py`.
 
-## Add or Change a Product
+That is the main file to practice with.
+
+## Step 1: Change a Product
 
 Open `products.py`.
 
-Each product looks like this:
+You will see three example products:
 
 ```python
 {
-    "id": "dragon",
-    "name": "Mini Flexi Dragon",
-    "price": 5,
-    "time": "1-2 days",
-    "description": "A poseable desk toy with a smooth, flexible body.",
-    "finish": "Rainbow, blue, black, or mystery color",
-    "image": "images/dragon.jpg",
+    "id": "product-1",
+    "name": "Example Product 1",
+    "description": "Write a short description for product 1 here.",
+    "price": 1,
+    "image": "images/example-product-1.jpg",
 },
 ```
 
-Change the words inside quotes. Change the price number.
-
-To add another product, copy one whole block, paste it below, and change the values.
-
-## Add a Product Picture
-
-Put the picture in the `images` folder.
-
-Use an easy file name, like:
-
-```text
-dragon.jpg
-phone-stand.jpg
-bookmark.jpg
-```
-
-Then update the product image line:
+Change only these parts at first:
 
 ```python
-"image": "images/phone-stand.jpg",
+"name": "Example Product 1",
+"description": "Write a short description for product 1 here.",
+"price": 1,
+"image": "images/example-product-1.jpg",
 ```
 
-## Rebuild the Website
+Keep the quotes.
 
-After editing `products.py`, run:
+Keep the commas.
+
+## Step 2: Add a Picture
+
+Put the product picture in the `images` folder.
+
+Example:
+
+```text
+images/dragon.jpg
+```
+
+Then update the image line:
+
+```python
+"image": "images/dragon.jpg",
+```
+
+## Step 3: Update the Website Files
+
+After changing `products.py`, run this:
 
 ```powershell
 python generate_site.py
 ```
 
-That updates `products-data.js`, which is what the website reads.
+That creates `products-data.js`.
 
-## Publish Changes
+The website reads `products-data.js`.
 
-After rebuilding, commit and push the files to GitHub. GitHub Pages will update the public website automatically.
+## Step 4: Publish It
 
-## Good First Coding Lesson
+When the website looks right:
 
-The most important idea here is:
-
-```python
-name = "Mini Flexi Dragon"
-price = 5
+```powershell
+git add .
+git commit -m "Update products"
+git push origin main
 ```
 
-The website is just using names, prices, descriptions, and image paths to build the shop.
+## Easy Way to Remember
+
+```text
+products.py      = the easy file to edit
+generate_site.py = the button that updates the website data
+git push         = sends it to the internet
+```

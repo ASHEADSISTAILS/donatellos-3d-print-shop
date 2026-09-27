@@ -3,152 +3,94 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mooresville 3D Prints</title>
+    <title>3D Print Shop</title>
     <meta
       name="description"
-      content="Small custom 3D prints in Mooresville, NC with local porch delivery and USPS shipping quotes."
+      content="A simple beginner 3D print shop website."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="banner">
+      <h1>3D Print Shop</h1>
+      <p>A simple website you can edit one product at a time.</p>
+    </header>
+
+    <nav class="tabs" aria-label="Store navigation">
+      <a href="#shop">Shop</a>
+      <a href="#cart">Cart</a>
+      <a href="#checkout">Checkout</a>
+    </nav>
+
     <main>
-      <section class="hero">
-        <nav aria-label="Store navigation">
-          <a href="#shop">Shop</a>
-          <a href="#checkout">Checkout</a>
-          <a href="#payments">Payments</a>
-        </nav>
-        <div class="hero-grid">
-          <div>
-            <p class="eyebrow">Mooresville, NC 3D prints</p>
-            <h1>Small custom 3D prints, made locally.</h1>
-            <p class="intro">
-              Pick a print, choose porch delivery near Cottle Creek Elementary
-              or request USPS shipping, then pay through a secure third-party
-              service.
-            </p>
-            <div class="hero-actions">
-              <a class="primary-link" href="#shop">Start an order</a>
-              <a class="secondary-link" href="#checkout">Check delivery</a>
-            </div>
-          </div>
-          <div class="printer-panel" aria-label="3D printer preview">
-            <div class="printer-frame">
-              <span class="rail"></span>
-              <span class="print-head"></span>
-              <span class="print-bed"></span>
-              <span class="print-object"></span>
-            </div>
-            <div class="panel-copy">
-              <strong>$1-$5 prints</strong>
-              <span>Good for school friends, neighbors, and quick gifts.</span>
-            </div>
-          </div>
+      <section class="example-summary">
+        <div>
+          <p class="label">Example Summary</p>
+          <h2>Welcome to the 3D Print Shop</h2>
+          <p>
+            This short section explains what the shop sells. Later, replace this
+            text with a simple sentence about the real 3D prints.
+          </p>
+        </div>
+        <div class="example-picture">
+          <span>Example Picture</span>
         </div>
       </section>
 
-      <section class="notice" aria-label="Payment and delivery note">
-        <p>
-          Best low-fee setup for tiny orders: local delivery with cash, Venmo,
-          Cash App, or PayPal. For online wallet checkout, bundle small prints
-          so fees do not eat the order.
-        </p>
-      </section>
-
-      <section class="shop" id="shop">
+      <section class="shop-section" id="shop">
         <div class="section-heading">
-          <p class="eyebrow">Starter catalog</p>
-          <h2>Choose a print</h2>
-          <p class="section-copy">
-            Products come from one beginner-friendly Python file, so this shop
-            is easy to change as new prints are ready.
-          </p>
+          <p class="label">Shop</p>
+          <h2>Example Products</h2>
+          <p>Each card has a product name, picture, description, and price.</p>
         </div>
         <div class="product-grid" id="productGrid"></div>
       </section>
 
-      <section class="checkout" id="checkout">
+      <section class="cart-section" id="cart">
         <div class="section-heading">
-          <p class="eyebrow">Order details</p>
-          <h2>Delivery or shipping</h2>
+          <p class="label">Cart</p>
+          <h2>What the customer picked</h2>
         </div>
-        <div class="checkout-grid">
-          <form id="orderForm">
-            <div class="toggle" role="radiogroup" aria-label="Delivery type">
-              <label>
-                <input checked name="delivery" type="radio" value="local" />
-                Local porch delivery
-              </label>
-              <label>
-                <input name="delivery" type="radio" value="shipping" />
-                USPS shipping quote
-              </label>
-            </div>
-
-            <label>
-              Name
-              <input id="customerName" autocomplete="name" />
-            </label>
-            <label>
-              Phone or email
-              <input id="contact" autocomplete="email" />
-            </label>
-            <label>
-              Delivery address
-              <input id="address" autocomplete="street-address" />
-            </label>
-            <label>
-              ZIP code
-              <input id="zip" autocomplete="postal-code" inputmode="numeric" maxlength="5" />
-            </label>
-            <p class="status" id="localStatus">Enter a ZIP code to check local delivery.</p>
-            <label>
-              Color, name, or special request
-              <textarea id="notes"></textarea>
-            </label>
-            <button class="primary-button" id="copyButton" disabled type="submit">
-              Copy order summary
-            </button>
-            <p class="success" id="copyStatus" hidden>Order summary copied.</p>
-          </form>
-
-          <aside class="cart-summary" aria-label="Cart summary">
-            <h3>Cart</h3>
-            <div id="cartItems"><p>No prints selected yet.</p></div>
-            <div class="total-row">
-              <span>Item subtotal</span>
-              <strong id="subtotal">$0.00</strong>
-            </div>
-            <p class="fine-print">
-              USPS shipping is added after package weight and address are
-              confirmed. Local porch delivery is free inside the delivery area.
-            </p>
-            <a class="email-link disabled" id="emailLink" href="#checkout">
-              Send order by email
-            </a>
-          </aside>
+        <div class="cart-box">
+          <div id="cartItems"><p>No products selected yet.</p></div>
+          <div class="total-row">
+            <span>Total</span>
+            <strong id="subtotal">$0.00</strong>
+          </div>
         </div>
       </section>
 
-      <section class="payments" id="payments">
+      <section class="checkout-section" id="checkout">
         <div class="section-heading">
-          <p class="eyebrow">Secure third-party checkout</p>
-          <h2>Payment options</h2>
+          <p class="label">Checkout</p>
+          <h2>Customer information</h2>
+          <p>
+            This is a simple starter checkout. We can add payment links and
+            delivery rules after the product cards feel easy.
+          </p>
         </div>
-        <div class="payment-grid">
-          <a id="paypalLink" href="#">PayPal</a>
-          <a id="venmoLink" href="#">Venmo</a>
-          <a id="cashAppLink" href="#">Cash App</a>
-          <a id="stripeLink" href="#">
-            Apple Pay / card via Stripe
-          </a>
-        </div>
-        <p class="payment-note">
-          Replace these placeholder links before sharing the QR code. Customers
-          pay the provider directly, so this site never collects card numbers.
-        </p>
+
+        <form id="orderForm">
+          <label>
+            Name
+            <input id="customerName" autocomplete="name" />
+          </label>
+          <label>
+            Phone or email
+            <input id="contact" autocomplete="email" />
+          </label>
+          <label>
+            Notes
+            <textarea id="notes" placeholder="Color, size, delivery question, etc."></textarea>
+          </label>
+          <button class="main-button" id="copyButton" disabled type="submit">
+            Copy order summary
+          </button>
+          <p class="success" id="copyStatus" hidden>Order summary copied.</p>
+        </form>
       </section>
     </main>
+
     <script src="products-data.js"></script>
     <script src="script.js"></script>
   </body>

@@ -1,49 +1,25 @@
 window.STORE_CONFIG = {
-  "settings": {
-    "orderEmail": "your-email@example.com",
-    "paymentLinks": {
-      "paypal": "https://www.paypal.com/paypalme/YOURPAYPALNAME",
-      "venmo": "https://venmo.com/u/YOURVENMO",
-      "cashApp": "https://cash.app/$YOURCASHTAG",
-      "stripe": "https://buy.stripe.com/YOUR_STRIPE_PAYMENT_LINK"
-    }
-  },
   "products": [
     {
-      "id": "dragon",
-      "name": "Mini Flexi Dragon",
-      "price": 5,
-      "time": "1-2 days",
-      "description": "A poseable desk toy with a smooth, flexible body.",
-      "finish": "Rainbow, blue, black, or mystery color",
-      "image": "images/dragon.jpg"
+      "id": "product-1",
+      "name": "Example Product 1",
+      "description": "Write a short description for product 1 here.",
+      "price": 1,
+      "image": "images/example-product-1.jpg"
     },
     {
-      "id": "keychain",
-      "name": "Custom Name Keychain",
-      "price": 3,
-      "time": "1 day",
-      "description": "Personalized with a first name, team name, or short word.",
-      "finish": "Single-color PLA",
-      "image": "images/keychain.jpg"
-    },
-    {
-      "id": "bookmark",
-      "name": "Book Buddy Bookmark",
+      "id": "product-2",
+      "name": "Example Product 2",
+      "description": "Write a short description for product 2 here.",
       "price": 2,
-      "time": "Same or next day",
-      "description": "A lightweight bookmark with a fun topper for school books.",
-      "finish": "Bright colors available",
-      "image": "images/bookmark.jpg"
+      "image": "images/example-product-2.jpg"
     },
     {
-      "id": "fidget",
-      "name": "Click Fidget Slider",
-      "price": 4,
-      "time": "1-2 days",
-      "description": "Pocket-size tactile slider for busy hands.",
-      "finish": "Matte PLA with printed texture",
-      "image": "images/fidget.jpg"
+      "id": "product-3",
+      "name": "Example Product 3",
+      "description": "Write a short description for product 3 here.",
+      "price": 3,
+      "image": "images/example-product-3.jpg"
     }
   ]
 };
