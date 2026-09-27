@@ -1,5 +1,4 @@
 const storeConfig = window.STORE_CONFIG || {};
-const site = storeConfig.site || {};
 const products = storeConfig.products || [];
 
 const cart = {};
@@ -47,29 +46,6 @@ function renderProducts() {
       `,
     )
     .join("");
-}
-
-function setText(selector, value) {
-  if (!value) return;
-  document.querySelector(selector).textContent = value;
-}
-
-function renderSiteText() {
-  setText("#browserTitle", site.browser_title);
-  setText("#bigTitle", site.big_title);
-  setText("#subtitle", site.subtitle);
-  setText("#summaryLabel", site.summary_label);
-  setText("#summaryTitle", site.summary_title);
-  setText("#summaryText", site.summary_text);
-  setText("#summaryPictureText", site.summary_picture_text);
-  setText("#shopLabel", site.shop_label);
-  setText("#shopTitle", site.shop_title);
-  setText("#shopText", site.shop_text);
-  setText("#cartLabel", site.cart_label);
-  setText("#cartTitle", site.cart_title);
-  setText("#checkoutLabel", site.checkout_label);
-  setText("#checkoutTitle", site.checkout_title);
-  setText("#checkoutText", site.checkout_text);
 }
 
 function orderSummary() {
@@ -123,7 +99,6 @@ function renderCart() {
   copyButton.disabled = !canCheckout();
 }
 
-renderSiteText();
 renderProducts();
 renderCart();
 

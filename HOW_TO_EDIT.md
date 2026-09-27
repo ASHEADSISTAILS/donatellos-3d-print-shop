@@ -23,30 +23,6 @@ Not safe yet:
 
 The scripts look for the original id names.
 
-## Way 2: Change Words in Python
-
-At the top of `products.py`, you will see `SITE`.
-
-Most lines are blank:
-
-```python
-SITE = {
-    "big_title": "",
-    "subtitle": "",
-}
-```
-
-Blank means: use the words already in `index.html`.
-
-If you fill one in, Python changes that part:
-
-```python
-SITE = {
-    "big_title": "Calvin's 3D Prints",
-    "subtitle": "Cool prints made by me.",
-}
-```
-
 ## Change a Product
 
 Open `products.py`.
@@ -92,7 +68,7 @@ Then update the image line:
 "image": "images/dragon.jpg",
 ```
 
-## Update the Website Files
+## Update Product Cards
 
 After changing `products.py`, run this:
 
@@ -100,9 +76,9 @@ After changing `products.py`, run this:
 python generate_site.py
 ```
 
-That creates `products-data.js`.
+That creates `products-data.js`, which is what the product cards read.
 
-The website reads `products-data.js`.
+If you only change `index.html`, you do not need to run Python.
 
 ## Step 4: Publish It
 
@@ -117,8 +93,9 @@ git push origin main
 ## Easy Way to Remember
 
 ```text
-index.html       = practice HTML and page layout
-products.py      = easy product edits
-generate_site.py = updates website data
-git push         = sends it to the internet
+index.html       = page words and layout
+styles.css       = colors and design
+products.py      = product cards
+generate_site.py = updates product cards only
+git push         = sends changes to the internet
 ```

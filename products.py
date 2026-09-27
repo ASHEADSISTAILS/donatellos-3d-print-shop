@@ -1,27 +1,5 @@
 # This is the easiest file to edit.
 # Change the products below to make the shop your own.
-#
-# SITE is optional.
-# Leave a line blank ("") if you want to use the words already in index.html.
-# Fill in a line if you want Python to change that part of the page.
-
-SITE = {
-    "browser_title": "",
-    "big_title": "",
-    "subtitle": "",
-    "summary_label": "",
-    "summary_title": "",
-    "summary_text": "",
-    "summary_picture_text": "",
-    "shop_label": "",
-    "shop_title": "",
-    "shop_text": "",
-    "cart_label": "",
-    "cart_title": "",
-    "checkout_label": "",
-    "checkout_title": "",
-    "checkout_text": "",
-}
 
 PRODUCTS = [
     {
