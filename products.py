@@ -1,22 +1,26 @@
 # This is the easiest file to edit.
-# Change the example words below to make the shop your own.
+# Change the products below to make the shop your own.
+#
+# SITE is optional.
+# Leave a line blank ("") if you want to use the words already in index.html.
+# Fill in a line if you want Python to change that part of the page.
 
 SITE = {
-    "browser_title": "3D Print Shop",
-    "big_title": "3D Print Shop",
-    "subtitle": "A simple website you can edit one product at a time.",
-    "summary_label": "Example Summary",
-    "summary_title": "Welcome to the 3D Print Shop",
-    "summary_text": "This short section explains what the shop sells. Later, replace this text with a simple sentence about the real 3D prints.",
-    "summary_picture_text": "Example Picture",
-    "shop_label": "Shop",
-    "shop_title": "Example Products",
-    "shop_text": "Each card has a product name, picture, description, and price.",
-    "cart_label": "Cart",
-    "cart_title": "What the customer picked",
-    "checkout_label": "Checkout",
-    "checkout_title": "Customer information",
-    "checkout_text": "This is a simple starter checkout. We can add payment links and delivery rules after the product cards feel easy.",
+    "browser_title": "",
+    "big_title": "",
+    "subtitle": "",
+    "summary_label": "",
+    "summary_title": "",
+    "summary_text": "",
+    "summary_picture_text": "",
+    "shop_label": "",
+    "shop_title": "",
+    "shop_text": "",
+    "cart_label": "",
+    "cart_title": "",
+    "checkout_label": "",
+    "checkout_title": "",
+    "checkout_text": "",
 }
 
 PRODUCTS = [

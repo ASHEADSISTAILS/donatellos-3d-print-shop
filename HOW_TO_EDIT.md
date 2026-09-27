@@ -1,27 +1,53 @@
 # How to Edit the 3D Print Shop
 
-Start with `products.py`.
+You can edit two ways:
 
-That is the main file to practice with.
+- Edit `index.html` to practice HTML and live changes.
+- Edit `products.py` to quickly change products.
 
-## Step 0: Change the Page Words
+## Way 1: Change Words in HTML
+
+If you change words in `index.html`, keep the `id="..."` parts.
+
+Safe:
+
+```html
+<h1 id="bigTitle">My New Shop Name</h1>
+```
+
+Not safe yet:
+
+```html
+<h1 id="newName">My New Shop Name</h1>
+```
+
+The scripts look for the original id names.
+
+## Way 2: Change Words in Python
 
 At the top of `products.py`, you will see `SITE`.
 
-That part controls the title and section words:
+Most lines are blank:
 
 ```python
 SITE = {
-    "big_title": "3D Print Shop",
-    "subtitle": "A simple website you can edit one product at a time.",
-    "summary_title": "Welcome to the 3D Print Shop",
-    "summary_text": "This short section explains what the shop sells.",
+    "big_title": "",
+    "subtitle": "",
 }
 ```
 
-Change the words inside quotes.
+Blank means: use the words already in `index.html`.
 
-## Step 1: Change a Product
+If you fill one in, Python changes that part:
+
+```python
+SITE = {
+    "big_title": "Calvin's 3D Prints",
+    "subtitle": "Cool prints made by me.",
+}
+```
+
+## Change a Product
 
 Open `products.py`.
 
@@ -50,7 +76,7 @@ Keep the quotes.
 
 Keep the commas.
 
-## Step 2: Add a Picture
+## Add a Picture
 
 Put the product picture in the `images` folder.
 
@@ -66,7 +92,7 @@ Then update the image line:
 "image": "images/dragon.jpg",
 ```
 
-## Step 3: Update the Website Files
+## Update the Website Files
 
 After changing `products.py`, run this:
 
@@ -91,7 +117,8 @@ git push origin main
 ## Easy Way to Remember
 
 ```text
-products.py      = the easy file to edit
-generate_site.py = the button that updates the website data
+index.html       = practice HTML and page layout
+products.py      = easy product edits
+generate_site.py = updates website data
 git push         = sends it to the internet
 ```
