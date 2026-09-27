@@ -4,6 +4,23 @@ Start with `products.py`.
 
 That is the main file to practice with.
 
+## Step 0: Change the Page Words
+
+At the top of `products.py`, you will see `SITE`.
+
+That part controls the title and section words:
+
+```python
+SITE = {
+    "big_title": "3D Print Shop",
+    "subtitle": "A simple website you can edit one product at a time.",
+    "summary_title": "Welcome to the 3D Print Shop",
+    "summary_text": "This short section explains what the shop sells.",
+}
+```
+
+Change the words inside quotes.
+
 ## Step 1: Change a Product
 
 Open `products.py`.

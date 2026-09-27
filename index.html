@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>3D Print Shop</title>
+    <title id="browserTitle">3D Print Shop</title>
     <meta
       name="description"
       content="A simple beginner 3D print shop website."
@@ -12,8 +12,8 @@
   </head>
   <body>
     <header class="banner">
-      <h1>3D Print Shop</h1>
-      <p>A simple website you can edit one product at a time.</p>
+      <h1 id="bigTitle">3D Print Shop</h1>
+      <p id="subtitle">A simple website you can edit one product at a time.</p>
     </header>
 
     <nav class="tabs" aria-label="Store navigation">
@@ -25,31 +25,31 @@
     <main>
       <section class="example-summary">
         <div>
-          <p class="label">Example Summary</p>
-          <h2>Welcome to the 3D Print Shop</h2>
-          <p>
+          <p class="label" id="summaryLabel">Example Summary</p>
+          <h2 id="summaryTitle">Welcome to the 3D Print Shop</h2>
+          <p id="summaryText">
             This short section explains what the shop sells. Later, replace this
             text with a simple sentence about the real 3D prints.
           </p>
         </div>
         <div class="example-picture">
-          <span>Example Picture</span>
+          <span id="summaryPictureText">Example Picture</span>
         </div>
       </section>
 
       <section class="shop-section" id="shop">
         <div class="section-heading">
-          <p class="label">Shop</p>
-          <h2>Example Products</h2>
-          <p>Each card has a product name, picture, description, and price.</p>
+          <p class="label" id="shopLabel">Shop</p>
+          <h2 id="shopTitle">Example Products</h2>
+          <p id="shopText">Each card has a product name, picture, description, and price.</p>
         </div>
         <div class="product-grid" id="productGrid"></div>
       </section>
 
       <section class="cart-section" id="cart">
         <div class="section-heading">
-          <p class="label">Cart</p>
-          <h2>What the customer picked</h2>
+          <p class="label" id="cartLabel">Cart</p>
+          <h2 id="cartTitle">What the customer picked</h2>
         </div>
         <div class="cart-box">
           <div id="cartItems"><p>No products selected yet.</p></div>
@@ -62,9 +62,9 @@
 
       <section class="checkout-section" id="checkout">
         <div class="section-heading">
-          <p class="label">Checkout</p>
-          <h2>Customer information</h2>
-          <p>
+          <p class="label" id="checkoutLabel">Checkout</p>
+          <h2 id="checkoutTitle">Customer information</h2>
+          <p id="checkoutText">
             This is a simple starter checkout. We can add payment links and
             delivery rules after the product cards feel easy.
           </p>

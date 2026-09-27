@@ -1,10 +1,11 @@
 import json
 from pathlib import Path
 
-from products import PRODUCTS
+from products import PRODUCTS, SITE
 
 
 data = {
+    "site": SITE,
     "products": PRODUCTS,
 }
 
