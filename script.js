@@ -1,53 +1,6 @@
-const products = [
-  {
-    id: "dragon",
-    name: "Mini Flexi Dragon",
-    price: 5,
-    time: "1-2 days",
-    description: "A poseable desk toy with a smooth, flexible body.",
-    finish: "Rainbow, blue, black, or mystery color",
-  },
-  {
-    id: "keychain",
-    name: "Custom Name Keychain",
-    price: 3,
-    time: "1 day",
-    description: "Personalized with a first name, team name, or short word.",
-    finish: "Single-color PLA",
-  },
-  {
-    id: "bookmark",
-    name: "Book Buddy Bookmark",
-    price: 2,
-    time: "Same or next day",
-    description: "A lightweight bookmark with a fun topper for school books.",
-    finish: "Bright colors available",
-  },
-  {
-    id: "fidget",
-    name: "Click Fidget Slider",
-    price: 4,
-    time: "1-2 days",
-    description: "Pocket-size tactile slider for busy hands.",
-    finish: "Matte PLA with printed texture",
-  },
-  {
-    id: "stand",
-    name: "Phone Stand",
-    price: 5,
-    time: "1-2 days",
-    description: "Simple angled stand for a phone or small tablet.",
-    finish: "Black, white, gray, or school colors",
-  },
-  {
-    id: "token",
-    name: "Bag Tag or Backpack Charm",
-    price: 1,
-    time: "Same or next day",
-    description: "Small charm for backpacks, sports bags, or lunch boxes.",
-    finish: "Ask for initials, number, or icon",
-  },
-];
+const storeConfig = window.STORE_CONFIG || {};
+const products = storeConfig.products || [];
+const settings = storeConfig.settings || {};
 
 const localZips = new Set([
   "28115",
@@ -95,6 +48,14 @@ function renderProducts() {
     .map(
       (product) => `
         <article class="product-card">
+          <div class="product-photo">
+            ${
+              product.image
+                ? `<img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.closest('.product-photo').classList.add('missing-image')" />`
+                : ""
+            }
+            <span>No photo yet</span>
+          </div>
           <div>
             <div class="product-topline">
               <h3>${product.name}</h3>
@@ -202,14 +163,37 @@ function renderCart() {
 
   if (canCheckout()) {
     emailLink.classList.remove("disabled");
-    emailLink.href = `mailto:your-email@example.com?subject=3D%20Print%20Order&body=${encodeURIComponent(orderSummary())}`;
+    emailLink.href = `mailto:${settings.orderEmail || "your-email@example.com"}?subject=3D%20Print%20Order&body=${encodeURIComponent(orderSummary())}`;
   } else {
     emailLink.classList.add("disabled");
     emailLink.href = "#checkout";
   }
 }
 
+function updatePaymentLinks() {
+  const paymentLinks = settings.paymentLinks || {};
+  const links = [
+    ["#paypalLink", paymentLinks.paypal],
+    ["#venmoLink", paymentLinks.venmo],
+    ["#cashAppLink", paymentLinks.cashApp],
+    ["#stripeLink", paymentLinks.stripe],
+  ];
+
+  links.forEach(([selector, href]) => {
+    const link = document.querySelector(selector);
+    if (!href) {
+      link.classList.add("disabled");
+      link.href = "#payments";
+      return;
+    }
+
+    link.classList.remove("disabled");
+    link.href = href;
+  });
+}
+
 renderProducts();
+updatePaymentLinks();
 renderCart();
 
 productGrid.addEventListener("click", (event) => {
