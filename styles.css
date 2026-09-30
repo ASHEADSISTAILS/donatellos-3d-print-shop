@@ -214,10 +214,10 @@ form,
   width: min(360px, 42vw);
 }
 
-.decal-dog-orange {
+.decal-rocket {
   bottom: -118px;
   left: -120px;
-  opacity: 0.3;
+  opacity: 0.34;
   transform: rotate(8deg);
   width: min(240px, 30vw);
 }
@@ -230,9 +230,9 @@ form,
   width: min(260px, 32vw);
 }
 
-.decal-dog-cyan {
+.decal-keychain {
   bottom: -74px;
-  opacity: 0.26;
+  opacity: 0.3;
   right: 10%;
   transform: rotate(-8deg);
   width: min(190px, 26vw);
@@ -490,7 +490,7 @@ textarea {
   }
 
   .decal-head,
-  .decal-dog-orange {
+  .decal-rocket {
     left: -80px;
   }
 
